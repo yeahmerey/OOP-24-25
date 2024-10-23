@@ -1,0 +1,12 @@
+package problem2;
+
+public class Queen extends Piece {
+	
+	public Queen(Position currentPosition) {
+		super(currentPosition); 
+	}
+	@Override
+	public boolean isLegalMove(Position nextPosition) {
+		boolean
+	}
+}

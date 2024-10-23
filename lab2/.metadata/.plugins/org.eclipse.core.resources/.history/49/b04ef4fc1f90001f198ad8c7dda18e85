@@ -1,0 +1,16 @@
+package problem2;
+
+public abstract class Piece {
+	Position currentPosition ; 
+	
+	public Piece(Position cur) {
+		this.currentPosition = cur;  
+	}
+	public static boolean rightMove(Position position) {
+		return position.letter >= 'a' && position.letter <= 'h' && position.number >= 1 && position.number <=8 ; 
+	}
+	public static boolean isLegalMove(Position currentPosition , Position nextPosition) {
+		return false ;
+	}
+	public abstract boolean isLegalMove(Position nextPosition); 
+}

@@ -1,0 +1,28 @@
+package problem2;
+
+public class Test {
+	public static void main(String[] args) {
+		King k = new King(new Position('a', 1));
+	    System.out.println(k.isLegalMove(new Position('b', 2)));
+	    System.out.println(k.isLegalMove(new Position('a', 3))); 
+	    
+	    Rook r = new Rook(new Position('a', 1));
+	    System.out.println(r.isLegalMove(new Position('h', 1)));
+	    System.out.println(r.isLegalMove(new Position('b' , 2))) ;
+	    
+	    Bishop b = new Bishop(new Position('a', 1));
+	    System.out.println(b.isLegalMove(new Position('c', 3)));
+	    System.out.println(b.isLegalMove(new Position('b',4)));
+	
+	    Queen q = new Queen(new Position('a', 1));
+	    System.out.println(q.isLegalMove(new Position('c', 3)));
+	    System.out.println(q.isLegalMove(new Position('c',2))); 
+
+	    Knight kn = new Knight(new Position('a', 1));
+	    System.out.println(kn.isLegalMove(new Position('b', 3)));
+	    System.out.println(kn.isLegalMove(new Position('b' , 4))); 
+	
+	    Pawn p = new Pawn(new Position('a', 1));
+	    System.out.println(.isLegalMove(new Position('e', 4));
+	}
+}

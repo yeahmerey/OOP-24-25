@@ -1,0 +1,8 @@
+INDEX VERSION 1.134+C:\Users\Asus\Desktop\LAB2\.metadata\.plugins\org.eclipse.jdt.core
+2565892838.index
+1713864106.index
+110427973.index
+1905512403.index
+33110876.index
+4025965168.index
+1865797976.index

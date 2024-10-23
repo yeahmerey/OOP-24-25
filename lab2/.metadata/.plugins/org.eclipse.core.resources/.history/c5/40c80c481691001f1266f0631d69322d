@@ -1,0 +1,12 @@
+package LibrarySystem;
+
+public class Runner {
+	public static void main(String[] args) { 
+		Magazine m = new Magazine("Balaqai" , "Daryn" , 2024 , 80 , 10 ); 
+		System.out.println(m.toString());
+		System.out.println(m.chooseMagazine());
+		m.setPrice(120) ;
+		m.raisePrice(); 
+		System.out.println(m.chooseMagazine()); 
+	}
+}

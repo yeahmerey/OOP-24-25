@@ -1,0 +1,20 @@
+package problem2;
+
+public class Pawn extends Piece{
+	public Pawn(Position currentPosition) {
+		super(currentPosition); 
+	}
+	public static boolean move(Position currentPosition , Position nextPosition) {
+		int n = Math.abs(currentPosition.number - nextPosition.number); 
+		int l = Math.abs(currentPosition.letter - nextPosition.letter); 
+		if(currentPosition.number == 2 || currentPosition.number == 7) {
+			return n == 1 || n == 2 ; 
+		}
+		else {
+			return n == 1 || (n == 1 && l == 1); 
+		}
+	}
+	public boolean isLegalMove(Position nextPosition) {
+		return rightMove(nextPosition) && move(this.currentPosition , nextPosition); 
+	}
+}

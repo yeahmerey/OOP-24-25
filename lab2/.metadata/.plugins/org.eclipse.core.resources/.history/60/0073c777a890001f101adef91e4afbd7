@@ -1,0 +1,18 @@
+package problem5;
+
+public class Test {
+	public static void main(String[] args) {
+		PhdStudent psnt = new PhdStudent("Miras" , 24 , 3.7) ; 
+		Employee empl = new Employee("Suliman" , 35 , 5); 
+		Dog dog = new Dog("Barsik" , 2); 
+		Cat cat = new Cat("Murka" , 5); 
+		psnt.assignPet(cat);
+		PersonRegistry registry = new PersonRegistry(); 
+		registry.addPerson(psnt);
+		registry.addPerson(empl);
+		psnt.leavePet(cat, empl);
+		System.out.println(registry);
+		psnt.returnPetFrom(cat, empl);
+		System.out.println(registry);
+	}
+}

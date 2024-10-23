@@ -1,0 +1,25 @@
+package problem5;
+
+public abstract class Person {
+	private String name ; 
+	private int age ; 
+	private Animal pet  ;
+	
+	public void assignPet(Animal pet) {
+		this.pet = pet ; 
+	}
+	public void removePet() {
+		this.pet = null; 
+	}
+	public boolean hasPet() {
+		return (pet!=null)
+	}
+	public abstract String getOccupation(); 
+	public String toString() {
+		return "Name : " + name + ", age = " + age + ", has a pet :" + pet ; 
+	}
+	public boolean equals(Object o) {
+		
+	}
+	public int hashCode(); 
+}

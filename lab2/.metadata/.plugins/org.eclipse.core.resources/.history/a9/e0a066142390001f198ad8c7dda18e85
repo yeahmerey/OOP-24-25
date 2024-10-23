@@ -1,0 +1,14 @@
+package problem2;
+
+public class Queen extends Piece{
+	public Queen(Position currentPosition) {
+		super(currentPosition); 
+	}
+	public static boolean queenMove(Position currentPosition , Position nextPosition) {
+		return Bishop.bishopMove(currentPosition, nextPosition) || Rook.rookMove(currentPosition, nextPosition);  
+	}
+	@Override
+	public boolean isLegalMove(Position nextPosition) {
+		return rightMove(nextPosition) && queenMove(this.currentPosition , nextPosition); 
+	}
+}

@@ -1,0 +1,9 @@
+package problem2;
+
+public abstract class Piece {
+	Position currentPosition ;
+	public Piece(Position curPosition) {
+		this.currentPosition = curPosition ;  
+	}
+	public abstract boolean isLegalMove(Position nextPosition)  ;	
+}

@@ -1,0 +1,15 @@
+package problem2;
+
+public class Rook extends Piece{
+	public Rook(Position currentPosition) {
+		super(currentPosition); 
+	}
+	public static boolean rookMove(Position currentPosition ,Position nextPosition ) {
+		return (currentPosition.letter == nextPosition.letter && currentPosition.number != nextPosition.number)
+			|| (currentPosition.letter != nextPosition.letter && currentPosition.number == nextPosition.number); 	
+	}
+	@Override
+	public boolean isLegalMove(Position nextPosition) {
+		return rightMove(nextPosition) && rookMove(this.currentPosition , nextPosition);
+	}
+}

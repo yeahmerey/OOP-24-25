@@ -1,0 +1,18 @@
+package problem2;
+
+public class Bishop extends Piece{
+	//слон
+	public Bishop(Position currentPosition) {
+		super(currentPosition) ;
+	}
+	
+	public boolean isLegalMove(Position nextPosition) {
+		int x = Math.abs(currentPosition.number - nextPosition.number); 
+		int y = Math.abs(currentPosition.letter - nextPosition.letter);
+		if(x == y) {
+			return true; 
+		}
+		return false; 
+	}
+	
+}

@@ -1,0 +1,31 @@
+package problem3;
+
+public class Test {
+	public static void main(String[] args) {
+		Bank bank = new Bank(); 
+		CheckingAccount account1 = new CheckingAccount(4048585 , "Merey Kaliyev"); 
+		SavingsAccount account2 = new SavingsAccount(4048584 , "Merey Kaliyev", 4.0);
+		
+		CheckingAccount account3 = new CheckingAccount(4034343 , "Miras Kazbaganbetov"); 
+		SavingsAccount account4 = new SavingsAccount(4045454 , "Miras Talgatovich" , 6.0); 
+		
+		bank.openAccount(account1);
+		bank.openAccount(account2);
+		bank.openAccount(account3); 
+		bank.openAccount(account4);
+		
+		account1.deposit(2000);
+		account1.withdraw(599);
+		account2.deposit(300);
+		account2.deposit(532);
+		account2.deposit(600);
+		account2.withdraw(800);
+		account2.withdraw(599);
+		
+		bank.update();
+		bank.closeAccount(4034343);
+		bank.closeAccount("Merey Kaliyev" , 4048585);
+		
+		
+	}
+}
