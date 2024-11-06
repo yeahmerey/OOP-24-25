@@ -1,0 +1,13 @@
+package bonus;
+
+public class Dog extends Animal implements CanWalk , CanSwim{
+	public void makeSound() {
+		System.out.println("Dog is barking!"); 
+	}
+	public void walk() {
+		System.out.println("DOg can walk"); 
+	}
+	public void swim() {
+		System.out.println("Dog can swim") ;
+	}
+}

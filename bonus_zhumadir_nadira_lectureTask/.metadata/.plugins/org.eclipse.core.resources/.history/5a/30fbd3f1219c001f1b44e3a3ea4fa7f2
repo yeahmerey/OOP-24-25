@@ -1,0 +1,14 @@
+package bonus;
+
+public class Bird extends Animal implements CanFly , CanWalk{
+	@Override
+	public void makeSound() {
+		System.out.println("Bird is chirping!"); 
+	}
+	public void fly() {
+		System.out.println("Bird can fly in air") ;
+	}
+	public void walk() {
+		System.out.println("Bird can walk "); 
+	}
+}
