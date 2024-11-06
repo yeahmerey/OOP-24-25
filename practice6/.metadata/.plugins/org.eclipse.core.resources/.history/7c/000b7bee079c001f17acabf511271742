@@ -1,0 +1,20 @@
+package practice6;
+
+public class Test {
+	public static void main(String[] args) {
+		try {
+			
+		Cat barsik = new Cat() ;
+		Person person  = new Person("Merey", 18); 
+		Restaurant r = new Restaurant() ; 
+		System.out.println(r.servePizza(barsik));
+		System.out.println(r.servePizza(person)); 
+		
+		barsik.eatPizza();
+		person.eatPizza();
+		
+		} catch(Exception e) {
+			System.out.println("Error : " + e.getMessage()) ;
+		}
+	}
+}

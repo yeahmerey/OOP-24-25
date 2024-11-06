@@ -1,0 +1,6 @@
+package practice6;
+
+interface CanHavePizza {
+	int pizzaSize = 26 ;
+	void eatPizza() ;
+}

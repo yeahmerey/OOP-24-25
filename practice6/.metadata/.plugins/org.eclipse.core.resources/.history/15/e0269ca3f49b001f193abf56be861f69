@@ -1,0 +1,30 @@
+package practice6;
+
+public class Cat extends Animal implements CanHavePizza{
+	private String voice ; 
+	{
+		voice = "meowww - meowww , prrr , prrr :) !"; 
+	}
+	public String getVoice() {
+		return voice ; 
+	}
+	@Override
+	public void breath() {
+		System.out.println("Cat " + super.name + " can breathe") ;
+	}
+
+	@Override
+	public void move() {
+		System.out.println("Cat " + super.name + " can move"); 
+	}
+	@Override
+	public void eatPizza() {
+		if(pizzaSize < 25) {
+			System.out.println("Cat can eat pizzaaa , meowwww !!!") ;
+		}
+	}
+	@Override 
+	public String toString() {
+		return super.toString() + " , and cat makes sound : " + this.voice ; 
+	}
+}

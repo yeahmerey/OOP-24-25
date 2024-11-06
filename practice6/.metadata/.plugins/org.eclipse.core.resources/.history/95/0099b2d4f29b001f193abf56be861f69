@@ -1,0 +1,23 @@
+package practice6;
+
+public class Person implements CanHavePizza {
+	
+	private String name ; 
+	private int age ;
+	public boolean isHappy ; 
+	
+	public Person() {
+	}
+	public Person(String name, int age) {
+		this.name = name ; 
+		this.age = age ; 
+	}
+	@Override 
+	public void eatPizza() {
+		System.out.println((isHappy && age >= 5 && age <=60) ? "Take my money" : "I'm not gonna eat") ;
+	}
+	@Override 
+	public String toString() {
+		return "name : " + this.name + "'s Happy :" + this.isHappy;
+	}
+}

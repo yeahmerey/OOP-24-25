@@ -1,0 +1,36 @@
+package practice6;
+
+public class Student extends Person{
+	private double gpa ; 
+	private int retakeCount ; 
+	{
+		retakeCount = 0 ; 
+	}
+	public void setRetakeCount(int retakeCount) {
+		this.retakeCount = retakeCount ; 
+	}
+	public Student() {
+	}
+	public Student(String name , int age , double gpa) {
+		super(name , age) ;
+		this.gpa = gpa ; 
+		isHappy = (gpa > 3.0); 
+	}
+	public double getGpa() {
+		return gpa ; 
+	}
+	public void setGpa(double gpa) {
+		this.gpa = gpa ; 
+	}
+	
+	@Override
+	public void eatPizza() {
+		if(isHappy && retakeCount == 0) {
+			System.out.println("Student can eat pizza :) !!!"); 
+		}
+	}
+	@Override
+	public String toString() {
+		return super.toString() + ", gpa = " + this.gpa; 
+	}
+}
