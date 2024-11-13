@@ -1,0 +1,58 @@
+package task1;
+
+public class Electronics extends Product implements Discount , Returnable , Shippable{
+	
+	public Electronics(String name , int price , int count) {
+		super(name , price , count) ; 
+	}
+	
+	@Override 
+	public boolean canApplyDiscount() {
+		return (getPrice() > 500000) ? true : false ; 
+	}
+	@Override
+	public int calculateFinalPrice() {
+		if(canApplyDiscount()) {
+			return super.getPrice()  * (discountPersentage / 100) ; 
+		}
+		else {
+			return super.getPrice() ; 
+		}
+	}	
+	@Override
+	public void description() {
+		System.out.println("It is electronics !") ;
+	}
+	@Override 
+	public void applyDiscount() {
+		if(canApplyDiscount()) {
+			System.out.println("We can add discount for this product") ; 
+		}
+		else {
+			System.out.println("We cannot add discount !"); 
+		}
+	}
+	@Override 
+	public boolean canBeReturned() {
+		if(getPrice() > 100000) {
+			return true ; 
+		}
+		else {
+			return false;  
+		}
+	}
+	@Override
+	public void getReturnPolicy() {
+		System.out.println("Electronic devices should not be broken!") ; 
+	}
+	@Override 
+	public void freeShippable() {
+		if(getPrice() > minPriceForShip) {
+			System.out.println("Wowww , we can do delivery freeee : )") ;
+		}
+		else {
+			System.out.println("Your device is not large than min price for delivery :( , you neeed pay 500 KZT !"); 
+		}
+	}
+	
+}

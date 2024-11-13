@@ -1,0 +1,18 @@
+package task1;
+
+public class purchasingTester {
+	public static void main(String[] args) {
+		Electronics laptop = new Electronics("ASUS TUF" , 300000 , 2 , true);
+		laptop.description();
+		laptop.applyDiscount();
+		laptop.buyCustomer();
+		System.out.println("Current count in our shop : " + laptop.getCount());  
+		System.out.println("Final Price : "+ laptop.calculateFinalPrice());
+		laptop.freeShippable();
+		laptop.getReturnPolicy();
+		System.out.println("Can be returned :" + laptop.canBeReturned());
+		laptop.setPopular(false);
+		laptop.applyDiscount();
+		laptop.calculateFinalPrice(); 
+	}
+}

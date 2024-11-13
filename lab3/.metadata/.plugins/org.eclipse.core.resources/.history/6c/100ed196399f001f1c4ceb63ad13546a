@@ -1,0 +1,14 @@
+package task2;
+
+public class auylTest {
+	public static void main(String[] args) {
+		Cow bessie = new Cow("Bessie" , 5) ;
+		System.out.println(bessie.info()); 
+		bessie.peopleCanMove();
+		bessie.canMoveItself();
+		
+		Fridge f1 = new Fridge(); 
+		f1.info() ;
+		f1.peopleCanMove(); 
+	}
+}

@@ -1,0 +1,13 @@
+package task1;
+
+public abstract class Person{
+	String name ; 
+	
+	public void happyPrint() {
+		System.out.println("Person is happy !"); 
+	}
+	public abstract void workDescrption(); 
+	public String toString() {
+		return("name : " + name); 
+	}
+}

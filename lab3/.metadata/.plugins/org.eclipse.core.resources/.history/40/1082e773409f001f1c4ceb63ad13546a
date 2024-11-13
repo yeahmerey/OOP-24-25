@@ -1,0 +1,14 @@
+package task3;
+
+import java.util.* ;  
+interface MyCollection<E>{
+	void add(E element); 
+	void remove(E element); 
+	boolean contains(E element) ;
+	int size() ; 
+	boolean isEmpty(); 
+	void clear() ; 
+	Iterator<E> iterator() ; 
+	E get(int index); 
+	E set(int index , E element); 
+}

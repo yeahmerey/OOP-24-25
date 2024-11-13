@@ -1,0 +1,28 @@
+package task2;
+
+public class Cow implements Moved{
+	private int speed ; 
+	
+	public Cow(int speed) {
+		this.speed = speed ; 
+	}
+	@Override
+	public void peopleCanMove() {
+		System.out.println("People can move a cow as he wants"); 
+	}
+
+	@Override
+	public void canMoveItself() {
+		System.out.println("Cow can move with speed" + speed); 
+		
+	}
+	public int getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+
+
+}

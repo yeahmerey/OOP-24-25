@@ -1,0 +1,5 @@
+package task1;
+
+interface MobileControl {
+	void connectWithApp(String appName) ; 
+}

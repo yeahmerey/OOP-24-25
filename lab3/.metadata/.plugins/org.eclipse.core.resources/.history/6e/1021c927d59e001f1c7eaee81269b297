@@ -1,0 +1,34 @@
+package task1;
+
+public class Electronics extends Product implements Discount{
+	public Electronics(String name , int price , int count) {
+		super(name , price , count) ; 
+	}
+	
+	@Override 
+	public boolean canApplyDiscount() {
+		return (getPrice() > 500000) ? true : false ; 
+	}
+	@Override
+	public int calculateFinalPrice() {
+		if(canApplyDiscount()) {
+			return super.getPrice()  * (discountPersentage / 100) ; 
+		}
+		else {
+			return super.getPrice() ; 
+		}
+	}	
+	@Override
+	public void description() {
+		System.out.println("It is electronics !") ;
+	}
+	@Override 
+	public void applyDiscount() {
+		if(canApplyDiscount()) {
+			System.out.println("We can add discount for this product") ; 
+		}
+		else {
+			System.out.println("We cannot add discount !"); 
+		}
+	}
+}

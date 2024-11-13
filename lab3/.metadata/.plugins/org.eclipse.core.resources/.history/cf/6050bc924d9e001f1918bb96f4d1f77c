@@ -1,0 +1,23 @@
+package task1;
+
+public class Student extends Person{
+	private int gpa ;
+	public Student(String name , int gpa) {
+		super(name); 
+		this.gpa = gpa; 
+	}
+	public int getGpa() {
+		return gpa;
+	}
+	public void setGpa(int gpa) {
+		this.gpa = gpa;
+	}
+	@Override
+	public void workDescription() {
+		System.out.println("Student of KBTU"); 
+	}
+	@Override
+	public String toString() {
+		return super.toString() + ", gpa :" + this.gpa ;
+	}
+}

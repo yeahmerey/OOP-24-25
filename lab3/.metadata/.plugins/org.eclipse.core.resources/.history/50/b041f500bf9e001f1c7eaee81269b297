@@ -1,0 +1,45 @@
+package task1;
+
+public class Student extends Person implements Person2 , aboutFriends{
+	private int gpa ;
+	public Student(String name , int gpa) {
+		super(name); 
+		this.gpa = gpa; 
+	}
+	public int getGpa() {
+		return gpa;
+	}
+	public void setGpa(int gpa) {
+		this.gpa = gpa;
+	}
+	@Override
+	public void workDescription() {
+		System.out.println("Student of KBTU"); 
+	}
+	@Override
+	public String toString() {
+		return super.toString() + ", gpa :" + this.gpa ;
+	}
+	///interface : 
+	@Override
+	public int salarySum(int salary) {
+		return salary * 12 ; 
+	}
+	@Override
+	public void familyInfo() {
+		System.out.println(super.name + "has a family"); 
+	}
+	@Override
+	public int friendCount() {
+		return friends ; 
+	}
+	@Override
+	public void friendDescription() {
+		if(friendCount() > 0) {
+			System.out.println(super.name + "has a friends : " + friendCount()); 
+		}
+		else {
+			System.out.println(super.name + "has not friends") ;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+package task6;
+
+import java.util.Collections;
+import java.util.* ; 
+public class TestInterface {
+	public static void main(String[] args) {
+		Dog d = new Dog("Barsik" , 2) ;
+		Dog d1 = new Dog("Cooper" , 3) ; 
+		Dog d2 = new Dog("Charlie" , 1) ; 
+		d.lastAction() ; 
+		d.interest();
+		List<Dog> dogs = new ArrayList<>() ; 
+		dogs.add(d) ; dogs.add(d1) ; dogs.add(d2) ; 
+		Collections.sort(dogs);
+	}
+}

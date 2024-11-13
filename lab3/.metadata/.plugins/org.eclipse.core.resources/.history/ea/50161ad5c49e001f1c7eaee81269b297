@@ -1,0 +1,6 @@
+package task1;
+
+interface ChildLock {
+	boolean isChildEnabled() ; 
+	void lockStatus() ; 
+}

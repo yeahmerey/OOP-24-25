@@ -1,0 +1,6 @@
+package task1;
+
+interface aboutFriends {
+	int friendCount(int friend); 
+	void friendDescription(); 
+}

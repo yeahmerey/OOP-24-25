@@ -1,0 +1,21 @@
+package task4;
+import java.util.*;l
+public class Test {
+	public static void main(String[] args) {
+		Date hireDate1 = new Date() ; 
+		Date hireDate2 = new Date(hireDate1.getTime() - 86400000L);
+		
+		Employee e1 = new Employee("Steve", 100000 , hireDate1 ,"KZ Health Insurance", "KZ23241") ;
+		Employee e2 = new Employee("Smith" , 200000 , hireDate2 , "KZ Sport & Health Insurance",  "KZ101010"); 
+		Manager m = new Manager("Johnson" , 1020000 , hireDate1 , "KZ WhyNotHealth insurance" , "KZ3292482" , 10000);
+		m.addToTeam(e1); 
+		m.addToTeam(e2);
+		
+		System.out.println(e1); 
+		System.out.println(e2); 
+		
+		
+		
+		
+	}
+}

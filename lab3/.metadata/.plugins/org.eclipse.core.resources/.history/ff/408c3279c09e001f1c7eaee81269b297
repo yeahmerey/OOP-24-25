@@ -1,0 +1,31 @@
+package task1;
+
+public abstract class Device {
+	private String name ; 
+	private boolean powerStatus;
+	
+	public Device(String name , boolean powerStatus) {
+		this.name = name ; 
+		this.powerStatus = powerStatus ; 
+	}
+	
+	public void setName( String name ) {
+		this.name = name ; 
+	}
+	public String getName() {
+		return name ;  
+	}
+	public void setStatus( boolean powerStatus ) {
+		this.powerStatus = powerStatus ; 
+	}
+	public boolean getStatus() {
+		return this.powerStatus ; 
+	}
+	
+	public abstract void operate() ; 
+	
+	@Override
+	public String toString() {
+		return "name : " + name + ", power of status : " + powerStatus ; 
+	}
+}

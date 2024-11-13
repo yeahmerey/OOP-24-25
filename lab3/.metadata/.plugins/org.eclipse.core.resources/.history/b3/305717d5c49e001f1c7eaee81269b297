@@ -1,0 +1,16 @@
+package task1;
+
+public class Smartphone extends Device implements BatteryLevel , NetworkConnection , Security , Updatable{
+	int batteryLevel ; 
+	{
+		batteryLevel = 100 ; 
+	}
+	public Smartphone(String name , boolean powerStatus) {
+		super(name , powerStatus) ;
+	}
+	public Smartphone(String name , boolean powerStatus , int batteryLevel) {
+		super(name , powerStatus) ;
+		this.batteryLevel = batteryLevel ; 
+	}
+	
+}

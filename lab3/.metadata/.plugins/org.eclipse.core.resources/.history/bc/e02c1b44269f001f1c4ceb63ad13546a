@@ -1,0 +1,6 @@
+package task1;
+
+interface SeasonalDiscount extends Discount{
+	void setSeason(String season) ; 
+	String getSeason() ; 
+}

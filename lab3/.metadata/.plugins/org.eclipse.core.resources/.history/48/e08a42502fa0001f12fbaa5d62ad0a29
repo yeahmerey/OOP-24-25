@@ -1,0 +1,21 @@
+package task6;
+
+public class Cat extends Animal{
+	
+	public Cat(String name , int age) {
+		super(name, age); 
+	}
+	@Override
+	public void getSound() {
+		System.out.println( "meowwww! :)");  
+	}
+	
+	@Override 
+	public String toString() {
+		return super.toString() + " - Cat |"; 
+	}
+	@Override
+	public void lastAction() {
+		System.out.println("Cat " + getName() + " meowed and asked for food"); 
+	}
+}

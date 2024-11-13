@@ -1,0 +1,6 @@
+package task1;
+
+interface StopWork {
+	boolean checkWorkTime() ;
+	void stop(); 
+}

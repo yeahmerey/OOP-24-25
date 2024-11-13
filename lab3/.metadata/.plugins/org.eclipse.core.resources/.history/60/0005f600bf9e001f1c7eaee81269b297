@@ -1,0 +1,6 @@
+package task1;
+
+public interface Person2 {
+	int salarySum(int salary); 
+	void familyInfo(); 
+}
