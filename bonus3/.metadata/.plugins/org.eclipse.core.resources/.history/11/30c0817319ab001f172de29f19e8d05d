@@ -1,0 +1,23 @@
+package bonus3;
+
+import java.io.IOException;
+
+public class Test {
+
+    public static void main(String[] args) {
+        String fileName = "animal_data.txt";
+        Dog bobby = new Dog("Bobby", 3, "White", "Sherpherd");
+
+        try {
+            FilePart.saveToFile(bobby, fileName);
+            System.out.println("Object saved to file : " + fileName);
+
+            Dog restoredDog = (Dog) FilePart.readFromFile(fileName, true);
+            System.out.println("Restored data from file:");
+            System.out.println(restoredDog);
+
+        } catch (IOException e) {
+            System.err.println("Error occurs when work with file : " + e.getMessage());
+        }
+    }
+}

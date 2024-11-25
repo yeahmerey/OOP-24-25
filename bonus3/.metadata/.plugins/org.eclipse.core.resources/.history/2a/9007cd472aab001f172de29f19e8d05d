@@ -1,0 +1,24 @@
+package bonus3 ; 
+
+import java.io.* ; 
+
+public class Test{
+	public static void main(String[] args) {
+		Dog bobby = new Dog("Bobby" , 1 , "White") ;
+		try(FileOutputStream fileOut = new FileOutputStream("dog.ser");
+			ObjectOutputStream out = new ObjectOutputStream(fileOut)){
+			out.writeObject(bobby);
+			System.out.println("Serialization is occurs of object" + bobby) ; 
+		} catch( IOException e) {
+			e.printStackTrace();
+		}
+		
+		try(FileInputStream fileIn = new FileInputStream("dog.ser"); 
+			ObjectInputStream in = new ObjectInputStream(fileIn)){
+			Dog deserializatonBobby = (Dog) in.readObject(); 
+			System.out.println("Deserialization of object : " + deserializatonBobby ) ; 
+		}catch(IOException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+}

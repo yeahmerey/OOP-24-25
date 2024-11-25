@@ -1,0 +1,20 @@
+package bonus3;
+import java.io.* ; 
+public class Test {
+	public static void main(String[] args) {
+        String fileName = "dog_data.txt";
+
+        Dog bobby = new Dog("Бобби", 3, "Золотистый ретривер");
+
+        try {
+            FilePart.saveToFile(bobby, fileName);
+            System.out.println("Данные собаки успешно сохранены в файл: " + fileName);
+
+            Dog readDog = FilePart.readFromFile(fileName);
+            System.out.println("Расшифрованные данные из файла:");
+            System.out.println(readDog);
+        } catch (IOException e) {
+            System.err.println("Ошибка при работе с файлом: " + e.getMessage());
+        }
+    }
+}

@@ -1,0 +1,29 @@
+package bonus3;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.Base64;
+
+public class FilePart {
+	public static void saveToFile(Animal animal , String fileName) throws IOException{
+		String data = animal.toDataInfo() ; 
+		String codedData = Base64.getEncoder().encodeToString(data.getBytes()); 
+		
+		try(FileWriter writer = new FileWriter(fileName)){
+			writer.write(codedData);
+		}
+	}
+	
+	public static Animal readFromFile(String fileName , boolean isDog) throws IOException {
+		StringBuilder codedData = new StringBuilder(); 
+		try(BufferedReader reader = new BufferedReader(new FileReader(fileName))){
+			String line ; 
+			while((line = reader.readLine()) != null) {
+				codedData.append(line) ; 
+			}
+		}
+		String decodedData = new String(Base64.getDecoder().decode(codedData.toString()));
+		return isDog ? Dog.fromDataInfo(decodedData) : Animal.fromDataInfo(decodedData); 
+	}
+}

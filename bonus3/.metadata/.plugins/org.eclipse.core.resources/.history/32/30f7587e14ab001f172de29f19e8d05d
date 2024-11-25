@@ -1,0 +1,30 @@
+package bonus3;
+
+import java.io.Serializable;
+
+public class Animal implements Serializable{
+	
+	private String name ; 
+	private int age ; 
+	
+	public Animal(String name , int age) {
+		this.name = name ; 
+		this.age = age ; 
+	}
+	public String getName() {
+		return this.name ; 
+	}
+	public int getAge() {
+		return this.age ; 
+	}
+	public String animalDataToString() {
+		return name + "|" + age + "|" ;  
+	}
+	public static Animal fromStringToData(String dataString){
+		String[] lines = dataString.split("|") ; 
+		return new Animal(lines[0] , Integer.parseInt(lines[1])) ;
+	}
+	public String toString() {
+		return "name " + name + " , age : " + age ; 
+	}
+}

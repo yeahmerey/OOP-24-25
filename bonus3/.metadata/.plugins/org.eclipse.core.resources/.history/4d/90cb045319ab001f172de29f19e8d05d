@@ -1,0 +1,18 @@
+package bonus3;
+import java.io.* ; 
+public class Test {
+	public static void main(String[] args) {
+		String fileName = "dog_data.txt" ; 
+		Dog bobby = new Dog("Bobby" , 1 , "white" , "shepherd"); 
+		try {
+			FilePart.saveToFile(bobby, fileName);
+			System.out.println("Object saved to file : " + fileName) ; 
+			
+			Dog restoredDog = (Dog) FilePart.readFromFile(fileName, true) ; 
+			System.out.println("Object restored from file : ") ;
+			System.out.println(restoredDog); 
+		} catch (IOException e) {
+			System.err.println("Error occured with file : " + e.getMessage()); 
+		}
+	}
+}
